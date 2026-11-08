@@ -1193,6 +1193,10 @@ textarea::placeholder {
   text-align: center;
   margin: var(--space-8) auto;
 }
+.error-fallback {
+  margin: 10vh auto;
+  max-width: 600px;
+}
 .empty-icon {
   display: inline-grid;
   place-items: center;
