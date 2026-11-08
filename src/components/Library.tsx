@@ -31,7 +31,7 @@ export function Library({ sessions, onOpen, onDelete, onCreate }: Props) {
         </button>
       </div>
       {sessions.length > 0 && (
-        <label className="search-field">
+        <label className="field-surface search-field">
           <Search size={18} />
           <input
             value={query}

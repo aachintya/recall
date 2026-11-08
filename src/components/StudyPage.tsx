@@ -64,7 +64,7 @@ export function StudyPage({ session, saved, onBack, onProgress }: Props) {
               </strong>
               <span>cards remembered</span>
             </div>
-            <div className="momentum-line">
+            <div className="progress-track momentum-line">
               <span style={{ width: `${progress}%` }} />
             </div>
             <span className="momentum-caption">{progress}% of this set remembered</span>

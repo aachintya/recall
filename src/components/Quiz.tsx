@@ -162,7 +162,7 @@ export function Quiz({ set, onCards }: { set: StudySet; onCards: () => void }) {
         </span>
       </div>
       <div
-        className="quiz-progress"
+        className="progress-track quiz-progress"
         role="progressbar"
         aria-label="Quiz progress"
         aria-valuemin={0}
@@ -201,7 +201,7 @@ export function Quiz({ set, onCards }: { set: StudySet; onCards: () => void }) {
       </div>
       {checked && (
         <div
-          className={`answer-feedback ${selected === question.correctIndex ? 'feedback-correct' : 'feedback-incorrect'}`}
+          className={`feedback-panel answer-feedback ${selected === question.correctIndex ? 'feedback-correct' : 'feedback-incorrect'}`}
           role="status"
         >
           <Lightbulb size={20} />

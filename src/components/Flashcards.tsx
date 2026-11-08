@@ -104,7 +104,7 @@ export function Flashcards({ session, onProgress, onQuiz }: Props) {
       )}
       <div className="flashcard-stack">
         <button
-          className={`flashcard ${flipped ? 'is-flipped' : ''}`}
+          className={`panel flashcard ${flipped ? 'is-flipped' : ''}`}
           onClick={() => setFlipped((value) => !value)}
           aria-label={flipped ? 'Show question' : 'Flip card to reveal answer'}
           aria-describedby={cardTextId}

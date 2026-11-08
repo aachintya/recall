@@ -22,17 +22,15 @@ button {
   background: none;
   color: inherit;
   cursor: pointer;
+  transition:
+    background 150ms,
+    border-color 150ms;
 }
 button,
 a,
 input,
 textarea {
   -webkit-tap-highlight-color: transparent;
-}
-button {
-  transition:
-    background 150ms,
-    border-color 150ms;
 }
 button:disabled {
   cursor: not-allowed;
@@ -65,6 +63,8 @@ h1 em {
 p {
   line-height: 1.75;
   overflow-wrap: anywhere;
+  font-size: 0.875rem;
+  color: var(--pencil);
 }
 svg {
   flex-shrink: 0;
@@ -189,6 +189,32 @@ kbd,
 .subtle-button:hover {
   background: var(--wash);
 }
+.field-surface {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-control);
+}
+.field-surface:focus-within {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+.feedback-panel {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-control);
+  font-size: 0.875rem;
+}
+.progress-track {
+  overflow: hidden;
+  border-radius: var(--radius-control);
+  background: var(--rule);
+}
+.progress-track > span {
+  display: block;
+  height: 100%;
+  background: var(--binding);
+}
 .page-enter {
   animation: enter 200ms ease-out;
 }
@@ -225,5 +251,47 @@ kbd,
     animation: none !important;
     transition: none !important;
     scroll-behavior: auto !important;
+  }
+}
+.source-badge {
+  flex-shrink: 0;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 4px 10px;
+  color: var(--pencil);
+  font-size: 0.6875rem;
+  background: var(--wash);
+}
+.empty-state {
+  max-width: 720px;
+  padding: var(--space-12) var(--space-6);
+  text-align: center;
+  margin: var(--space-8) auto;
+}
+.error-fallback {
+  margin: 10vh auto;
+  max-width: 600px;
+}
+.empty-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: var(--space-6);
+  color: var(--binding);
+  background: var(--wash);
+  border-radius: 50%;
+}
+.empty-state h2,
+.empty-state h1 {
+  font: 400 1.75rem/1.5 var(--font-recall);
+}
+.empty-state p {
+  max-width: 46ch;
+  margin: var(--space-4) auto var(--space-6);
+}
+@media (max-width: 640px) {
+  .subtle-button {
+    font-size: 0.75rem;
   }
 }

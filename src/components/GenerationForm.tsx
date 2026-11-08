@@ -56,7 +56,7 @@ export function GenerationForm({ notes, onNotesChange, state, onGenerate, onCanc
         <label className="field-label" htmlFor="notes">
           Your notes or topic
         </label>
-        <div className={`textarea-wrap ${validation ? 'input-invalid' : ''}`}>
+        <div className={`field-surface textarea-wrap ${validation ? 'input-invalid' : ''}`}>
           <textarea
             ref={input}
             id="notes"
@@ -142,7 +142,7 @@ export function GenerationForm({ notes, onNotesChange, state, onGenerate, onCanc
           </fieldset>
         </div>
         {error && (
-          <div className="error-panel" role="alert">
+          <div className="feedback-panel error-panel" role="alert">
             <AlertCircle size={20} />
             <div>
               <strong>
@@ -177,7 +177,7 @@ export function GenerationForm({ notes, onNotesChange, state, onGenerate, onCanc
                 <X size={19} />
               </button>
             </div>
-            <div className="indeterminate-track">
+            <div className="progress-track indeterminate-track">
               <span />
             </div>
             <p>
