@@ -2,6 +2,8 @@
 
 Study notes and topics become flashcards and quizzes through Gemini. Built with React, TypeScript, Vite, Express, and Zod.
 
+**Live app:** [recall-flam.vercel.app](https://recall-flam.vercel.app/)
+
 ## Local development
 
 Requires Node.js 22.12+ (22.x) and npm.
