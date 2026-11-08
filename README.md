@@ -70,3 +70,9 @@ With Google Chrome installed, use `PLAYWRIGHT_CHANNEL=chrome npm run test:e2e`. 
 Input and generated output are validated on the server and again in the browser. Failed generation preserves the notes and never substitutes an example silently. Cancelled or stale responses cannot replace the active request.
 
 The browser retains the latest 20 sets and card mastery. Quiz attempts reset when leaving the quiz. Generated facts should be checked against the source material.
+
+## AI usage note
+
+Assisted in the implementation using the free version of OpenAI's Codex.
+
+Model: `gpt-6-luna`
