@@ -14,5 +14,16 @@
       "destination": "/api/index"
     }
   ],
-  "installCommand": "npm ci --include=dev"
+  "installCommand": "npm ci --include=dev",
+  "headers": [
+    {
+      "source": "/demo.webm",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "video/webm"
+        }
+      ]
+    }
+  ]
 }

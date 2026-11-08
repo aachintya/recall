@@ -4,7 +4,7 @@ Study notes and topics become flashcards and quizzes through Gemini. Built with 
 
 **Live app:** [recall-flam.vercel.app](https://recall-flam.vercel.app/)
 
-**Demo video:** [Watch the walkthrough](.github/demo.webm)
+**Demo video:** [Watch the walkthrough](https://recall-flam.vercel.app/demo.webm)
 
 The recording shows live Gemini generation, flashcard review, quiz feedback, missed-question practice, and the saved library.
 
