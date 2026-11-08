@@ -4,7 +4,7 @@ Study notes and topics become flashcards and quizzes through Gemini. Built with 
 
 ## Local development
 
-Requires Node.js 22.12+ and npm.
+Requires Node.js 22.12+ (22.x) and npm.
 
 ```sh
 npm ci
@@ -43,6 +43,8 @@ docker run --rm -p 3000:3000 --env-file .env recall
 ```
 
 The current application serves one user with browser-local storage. A shared public deployment needs authentication and request/usage limits at the API boundary.
+
+For Vercel, import the GitHub repository using the Vite preset. `vercel.json` sets the build command and `dist` output; `api/index.ts` serves the existing API as one function. Add `GEMINI_API_KEY` and optionally `GEMINI_MODEL` to the project's environment variables before deploying. No start command is needed on Vercel.
 
 ## Checks
 
