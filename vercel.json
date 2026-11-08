@@ -13,5 +13,6 @@
       "source": "/api/:path*",
       "destination": "/api/index"
     }
-  ]
+  ],
+  "installCommand": "npm ci --include=dev"
 }
