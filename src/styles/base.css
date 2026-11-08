@@ -1,0 +1,229 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  font-family: var(--font-ui);
+  color: var(--ink);
+  background: var(--paper);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  margin: 0;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+button {
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+button,
+a,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+button {
+  transition:
+    background 150ms,
+    border-color 150ms;
+}
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+:where(button, a, input, textarea):focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 4px;
+}
+:where(h1, h2, h3, p) {
+  margin: 0;
+}
+h1,
+h2,
+h3 {
+  overflow-wrap: anywhere;
+}
+h1 {
+  font-family: var(--font-title);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+h1 em {
+  font-family: var(--font-recall);
+  color: var(--binding);
+  font-weight: 400;
+}
+p {
+  line-height: 1.75;
+  overflow-wrap: anywhere;
+}
+svg {
+  flex-shrink: 0;
+}
+fieldset {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+legend,
+.field-label {
+  padding: 0;
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
+kbd,
+.keycap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  padding: 2px 4px;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-control);
+  font: 0.75rem var(--font-ui);
+  color: var(--pencil);
+}
+.skip-link {
+  position: fixed;
+  top: var(--space-4);
+  left: var(--space-4);
+  z-index: 30;
+  transform: translateY(-200%);
+  padding: var(--space-3) var(--space-6);
+  background: var(--binding);
+  color: var(--paper);
+  border-radius: var(--radius-control);
+}
+.skip-link:focus {
+  transform: none;
+}
+.panel {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-panel);
+  background: var(--page);
+}
+.eyebrow {
+  display: block;
+  color: var(--pencil);
+  font-size: 0.6875rem;
+  line-height: 1.6;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: var(--space-3) var(--space-6);
+  border: 1px solid transparent;
+  border-radius: var(--radius-control);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.primary-button {
+  background: var(--binding);
+  color: var(--paper);
+}
+.primary-button:hover:not(:disabled) {
+  background: var(--binding-hover);
+}
+.secondary-button {
+  background: var(--page);
+  border-color: var(--rule);
+}
+.secondary-button:hover {
+  background: var(--wash);
+  border-color: var(--rule-strong);
+}
+.icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: var(--space-2);
+  border-radius: var(--radius-control);
+  color: var(--pencil);
+}
+.icon-button:hover {
+  background: var(--wash);
+  color: var(--binding);
+}
+.text-button,
+.subtle-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 32px;
+  padding: 0;
+  color: var(--binding);
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+.text-button:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.subtle-button {
+  color: var(--pencil);
+  padding: var(--space-2);
+  border-radius: var(--radius-control);
+}
+.subtle-button:hover {
+  background: var(--wash);
+}
+.page-enter {
+  animation: enter 200ms ease-out;
+}
+.spin {
+  animation: spin 1.4s linear infinite;
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes progress {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(360%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

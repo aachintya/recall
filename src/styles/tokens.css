@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap');
+
+/* Paper, charcoal bindings, and a lime highlighter for learning actions. */
+:root {
+  color-scheme: light;
+  --font-ui: 'DM Sans', system-ui, sans-serif;
+  --font-title: 'Manrope', system-ui, sans-serif;
+  --font-recall: Georgia, 'Times New Roman', serif;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --radius-control: 12px;
+  --radius-panel: 20px;
+  --radius-dialog: 24px;
+  --paper: oklch(0.97172 0.01062 100.82);
+  --page: oklch(0.99641 0.00666 97.35);
+  --ink: oklch(0.24519 0.00755 118.37);
+  --pencil: oklch(0.49183 0.01712 111.24);
+  --margin-ink: oklch(0.51652 0.01692 111.2);
+  --rule: oklch(0.90644 0.01608 106.72);
+  --rule-strong: oklch(0.68569 0.02719 111.99);
+  --binding: oklch(0.24519 0.00755 118.37);
+  --binding-hover: oklch(0.33998 0.01862 111.61);
+  --wash: oklch(0.94939 0.01326 106.65);
+  --highlighter: oklch(0.89787 0.1549 128.67);
+  --highlight-wash: oklch(0.95875 0.03928 121.18);
+  --highlight-ink: oklch(0.29012 0.04947 128.23);
+  --error-ink: oklch(0.51173 0.12015 27.27);
+  --error-wash: oklch(0.96398 0.01328 28.87);
+  --focus-ring: oklch(0.54783 0.08968 124.9);
+}
+
+[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: oklch(0.21843 0.00822 128.89);
+  --page: oklch(0.26302 0.01343 126.24);
+  --ink: oklch(0.95815 0.01455 106.67);
+  --pencil: oklch(0.79122 0.02371 115.07);
+  --margin-ink: oklch(0.73878 0.02839 116.28);
+  --rule: oklch(0.36869 0.02612 125.39);
+  --rule-strong: oklch(0.65106 0.04931 124);
+  --binding: oklch(0.95254 0.02378 109.42);
+  --binding-hover: oklch(0.90786 0.03631 115.65);
+  --wash: oklch(0.32013 0.02176 126.01);
+  --highlighter: oklch(0.89787 0.1549 128.67);
+  --highlight-wash: oklch(0.37037 0.05601 131.46);
+  --highlight-ink: oklch(0.29012 0.04947 128.23);
+  --error-ink: oklch(0.77776 0.08082 25.75);
+  --error-wash: oklch(0.32362 0.03018 28.46);
+  --focus-ring: oklch(0.89787 0.1549 128.67);
+}
