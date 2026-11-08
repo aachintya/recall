@@ -2,8 +2,8 @@ import 'dotenv/config';
 import { resolve } from 'node:path';
 import { existsSync } from 'node:fs';
 import express from 'express';
-import { createApp } from './app';
-import { readConfig } from './llm';
+import { createApp } from './app.js';
+import { readConfig } from './llm.js';
 
 const config = readConfig();
 const app = createApp(config);

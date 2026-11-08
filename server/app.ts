@@ -1,7 +1,7 @@
 import express, { type ErrorRequestHandler } from 'express';
-import { generationRequestSchema } from '../shared/schema';
-import { generateStudySet, type LlmConfig } from './llm';
-import { AppError } from './errors';
+import { generationRequestSchema } from '../shared/schema.js';
+import { generateStudySet, type LlmConfig } from './llm.js';
+import { AppError } from './errors.js';
 
 export function createApp(config: LlmConfig, fetcher: typeof fetch = fetch) {
   const app = express();

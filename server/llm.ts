@@ -1,7 +1,7 @@
 import { z } from 'zod';
-import { studySetSchema, type GenerationRequest } from '../shared/schema';
-import { AppError } from './errors';
-import { MAX_PROVIDER_TIMEOUT_MS } from '../shared/generation';
+import { studySetSchema, type GenerationRequest } from '../shared/schema.js';
+import { AppError } from './errors.js';
+import { MAX_PROVIDER_TIMEOUT_MS } from '../shared/generation.js';
 
 // The provider protocol stays on the server. Zod also checks semantic constraints.
 const object = (properties: Record<string, unknown>) => ({
